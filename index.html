@@ -25,6 +25,7 @@
   <link rel="apple-touch-icon" href="/img/icon-192.png">
 
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="icon" href="assets/ico/favicon_palmera.ico" type="image/x-icon">
 </head>
 
 <body>
@@ -54,7 +55,9 @@
         <li><a href="#inicio">Home</a></li>
         <li><a href="#actividades">Attività</a></li>
         <li><a href="#caracteristicas">Cosa dicono di noi</a></li>
-        <li><a href="#reservar" class="nav__cta">Prenotare</a></li>
+        <li><a href="#reservar" class="nav__cta">+ Info</a></li>
+        <li><a href="#reservar" class="nav__cta">Blog</a></li>
+        <li><a href="#reservar" class="nav__cta">Shop</a></li>
       </ul>
     </nav>
   </header>
@@ -175,7 +178,7 @@
 <section class="highlights" id="caracteristicas">
   <div class="highlights__inner">
 
-    <h2 class="highlights__title">Perche scegliere ZoccoBeach?</h2>
+    <h2 class="highlights__title">Perche dovresti scegliere ZoccoBeach?</h2>
 
     <div class="highlights__layout">
 
@@ -220,7 +223,7 @@
  <h3>Su di noi</h3>
 <p>ZoccoBeach è un’oasi acquatica pensata per vivere l’estate in modo sereno e divertente, tra sabbia naturale, piscine di acqua controllata e spazi dedicati al relax o al gioco. Le nostre aree comprendono piscine con profondità differenziata, zone ombreggiate con lettini, area relax, campo da beach volley, attività outdoor come SUP e kayak, oltre a un accogliente bar con snack, bibite e cocktails estivi. ZoccoBeach si trova in una posizione privilegiata sulle rive del Lago Trasimeno (Perugia) e è facilmente raggiungibile in auto e dotata di parcheggio adiacente alla struttura.</p>
 
-  <h3>Orari & giorni di apertura</h3>
+  <h3>Quando siamo aperti?</h3>
 
   <p>
     <strong>Stagione estiva (giugno – settembre)</strong><br>
@@ -236,7 +239,7 @@
     sabato e domenica: <strong>10:00 – 18:00</strong>
   </p>
   <!-- BLOQUE DOVE SIAMO -->
-  <h3>Dove siamo</h3>
+  <h3>Vieni a trovarci</h3>
   <p>
     <strong>Indirizzo</strong><br>
     ZoccoBeach – Via Gandhi, 37<br>
@@ -349,7 +352,7 @@
 
 <section id="reservar" class="booking">
   <div class="booking__inner">
-    <h2 class="booking__title">Prenota qua</h2>
+    <h2 class="booking__title">Chiedici più informazione</h2>
 
     <form class="booking__form" id="booking-form">
       <!-- Nombre -->
@@ -426,7 +429,7 @@
       <div class="booking__group">
         <label class="booking__label" for="actividad">
           <span class="booking__label-icon">🏄‍♂️</span>
-          <span>Pachetto</span>
+          <span>Sono interessato/a a...</span>
         </label>
         <select
           id="actividad"
@@ -442,10 +445,27 @@
         </select>
       </div>
 
+      <div class="booking__group">
+  <label class="booking__label" for="messaggio">
+    <span class="booking__label-icon">✉️</span>
+    <span>Messaggio</span>
+  </label>
+  <textarea
+    id="messaggio"
+    name="messaggio"
+    class="booking__input"
+    placeholder="Scrivi qui la tua richiesta o messaggio (min 10 caratteri, max 2000)"
+    minlength="10"
+    maxlength="2000"
+    required
+    rows="5"
+  ></textarea>
+</div>
+
       <!-- Botón -->
       <button type="submit" class="booking__submit">
         <span class="booking__submit-icon">🫧</span>
-        <span>Conferma prenotazione</span>
+        <span>Invia la tua richiesta</span>
       </button>
 
       <!-- Mensaje de confirmación -->
@@ -469,11 +489,20 @@
     </div>
 
     <!-- 🔹 NUEVA SECCIÓN LEGAL (solo añadida) -->
-    <div class="footer-legal-links">
-      <a href="#" class="footer-legal-links__item">Privacy Policy</a>
-      <a href="#" class="footer-legal-links__item">Cookie Policy</a>
-      <a href="#" class="footer-legal-links__item">Termini & Condizioni</a>
+   <div class="footer-legal-links">
+  <a href="#" class="modal-link" data-content="privacy">Privacy Policy</a>
+  <a href="#" class="modal-link" data-content="cookie">Cookie Policy</a>
+  <a href="#" class="modal-link" data-content="termini">Termini & Condizioni</a>
+</div>
+
+<div class="modal-overlay" id="modal-overlay">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal()">×</button>
+    <div class="modal-content" id="modal-content">
+    
     </div>
+  </div>
+</div>
     <!-- 🔹 FIN BLOQUE NUEVO -->
 
     <!-- Copyright -->
